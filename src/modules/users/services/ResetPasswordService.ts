@@ -7,6 +7,7 @@ import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
 import AppError from '@shared/errors/AppError';
 import IHashProvider from '@modules/users/providers/HashProvider/models/IHashProvider';
+import { classToClass } from 'class-transformer';
 
 interface IRequest {
   token: string;
@@ -27,7 +28,9 @@ class ResetPasswordService {
   ) {}
 
   public async execute({ password, token }: IRequest): Promise<void> {
-    const userToken = await this.userTokenRepository.findByToken(token);
+    const userToken = classToClass(
+      await this.userTokenRepository.findByToken(token),
+    );
     if (!userToken) {
       throw new AppError('Invalid token');
     }

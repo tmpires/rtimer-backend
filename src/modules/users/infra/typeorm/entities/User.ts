@@ -6,12 +6,12 @@ import {
   CreateDateColumn,
 } from 'typeorm';
 
-import { Exclude } from 'class-transformer';
+import { Exclude, Type } from 'class-transformer';
 
 @Entity('users')
 class User {
   @PrimaryGeneratedColumn('increment')
-  id: string;
+  id: number;
 
   @Column()
   name: string;
@@ -24,9 +24,11 @@ class User {
   password: string;
 
   @CreateDateColumn({ type: 'text' })
+  @Type(() => Date)
   created_at: Date;
 
   @UpdateDateColumn({ type: 'text' })
+  @Type(() => Date)
   updated_at: Date;
 }
 

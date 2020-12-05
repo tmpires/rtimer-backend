@@ -6,7 +6,7 @@ import { uuid } from 'uuidv4';
 class FakeUsersRepository implements IUsersRepository {
   private users: User[] = [];
 
-  public async findById(id: string): Promise<User | undefined> {
+  public async findById(id: number): Promise<User | undefined> {
     const user = this.users.find(u => u.id === id);
     return user;
   }

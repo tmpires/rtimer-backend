@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid';
 class FakeUserTokensRepository implements IUserTokensRepository {
   private tokens: UserToken[] = [];
 
-  public async generate(user_id: string): Promise<UserToken> {
+  public async generate(user_id: number): Promise<UserToken> {
     const userToken = new UserToken();
 
     Object.assign(userToken, {

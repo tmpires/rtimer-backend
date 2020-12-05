@@ -17,10 +17,10 @@ Neste repositório você ira encontrar a API para um sistema de organização de
 ### Funcionalidades
 Este lista apresenta as funcionalidades que já estão prontas, e as que faltam fazer.
 
-- [ ] Cadastrar usuários
-- [ ] Editar usuário
-- [ ] Autenticar usuário
-- [ ] Resgatar senha
+- [X] Cadastrar usuários
+- [X] Editar usuário
+- [X] Autenticar usuário
+- [X] Resgatar senha
 - [ ] Cadastrar matérias e seus pesos
 - [ ] Editar matérias e seus pesos
 - [ ] Cadastrar cronograma (data de inicio e fim dos estudos)

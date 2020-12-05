@@ -104,7 +104,7 @@ describe('UpdateProfile', () => {
   it('should be able to update user profile from non-existing user', async () => {
     await expect(
       updateUserService.execute({
-        user_id: 'non-existing-user',
+        user_id: 0,
         email: 'johndoe@gmail.com',
         name: 'John Doe',
       }),
