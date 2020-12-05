@@ -10,7 +10,7 @@ export default {
   defaults: {
     from: {
       email: 'antonio@tmendespires.tech',
-      name: 'Tonio Pires',
+      name: 'Antonio Pires',
     },
   },
 } as IMailConfig;
